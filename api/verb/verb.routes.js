@@ -1,7 +1,8 @@
 const express = require('express');
-const { getVerbs } = require('./verb.controller');
+const { getInfinitives, getConjugation } = require('./verb.controller');
 
 const router = express.Router()
-router.get('/', getVerbs)
+router.get('/', getInfinitives)
+router.get('/conjugation', getConjugation)
 
 module.exports = router
