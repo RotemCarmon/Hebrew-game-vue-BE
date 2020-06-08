@@ -19,6 +19,7 @@ function runSQL(query) {
       connection.query(query, function (error, results, fields) {
           if (error) reject(error);
           else resolve(results);
+          
       });
   })
 }

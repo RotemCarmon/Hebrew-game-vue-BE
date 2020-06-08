@@ -17,7 +17,17 @@ async function getConjugation(req, res) {
   }
 }
 
+async function addVerb(req, res) {
+  try {
+    const verb = await verbService.addVerb(req.body)
+    res.json(verb);
+  } catch (err) {
+    res.status(500).send({ error: 'cannt add verbs' })
+  }
+}
+
 module.exports = {
   getInfinitives,
-  getConjugation
+  getConjugation,
+  addVerb
 };
