@@ -1,4 +1,5 @@
 const verbService = require("./verb.service");
+const logger = require('../../services/logger.service')
 
 async function getInfinitives(req, res) {
   try {
